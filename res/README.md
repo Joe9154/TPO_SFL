@@ -1,1 +1,0 @@
-# Here are all resources used in the app (images).
