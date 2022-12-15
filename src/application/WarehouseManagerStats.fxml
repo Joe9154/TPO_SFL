@@ -216,7 +216,7 @@
                      </font>
                   </Button>
                   <ChoiceBox fx:id="choiceBoxFilter" disable="true" layoutX="212.0" layoutY="16.0" prefWidth="150.0" style="-fx-border-width: 1px; -fx-border-radius: 5px; -fx-border-color: black; -fx-background-color: none;" visible="false" />
-                  <AnchorPane layoutX="33.0" layoutY="56.0" onMouseClicked="#signOutAnchorPaneButton" prefHeight="104.0" prefWidth="219.0" style="-fx-border-color: #000000; -fx-border-radius: 5px; -fx-border-width: 1.5px; -fx-cursor: hand;">
+                  <AnchorPane layoutX="33.0" layoutY="56.0" prefHeight="104.0" prefWidth="219.0" style="-fx-border-color: #000000; -fx-border-radius: 5px; -fx-border-width: 1.5px;">
                      <children>
                         <Label fx:id="signOutAnchorPane1" alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="21.0" prefHeight="21.0" prefWidth="89.0" style="-fx-font-weight: bold;" text="All packages">
                            <font>
@@ -235,7 +235,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="268.0" layoutY="56.0" onMouseClicked="#signOutAnchorPaneButton" prefHeight="104.0" prefWidth="219.0" style="-fx-border-color: #000000; -fx-border-radius: 5px; -fx-border-width: 1.5px; -fx-cursor: hand;">
+                  <AnchorPane layoutX="268.0" layoutY="56.0" prefHeight="104.0" prefWidth="219.0" style="-fx-border-color: #000000; -fx-border-radius: 5px; -fx-border-width: 1.5px;">
                      <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="21.0" prefHeight="21.0" prefWidth="62.0" style="-fx-font-weight: bold;" text="Pending">
                            <font>
@@ -254,7 +254,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="504.0" layoutY="56.0" onMouseClicked="#signOutAnchorPaneButton" prefHeight="104.0" prefWidth="219.0" style="-fx-border-color: #000000; -fx-border-radius: 5px; -fx-border-width: 1.5px; -fx-cursor: hand;">
+                  <AnchorPane layoutX="504.0" layoutY="56.0" prefHeight="104.0" prefWidth="219.0" style="-fx-border-color: #000000; -fx-border-radius: 5px; -fx-border-width: 1.5px;">
                      <children>
                         <Label fx:id="signOutAnchorPane11" contentDisplay="TOP" layoutX="105.0" layoutY="21.0" prefHeight="21.0" prefWidth="89.0" style="-fx-font-weight: bold;" text="Processed">
                            <font>

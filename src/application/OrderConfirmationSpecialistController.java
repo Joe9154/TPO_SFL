@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -31,6 +32,10 @@ public class OrderConfirmationSpecialistController implements Initializable {
 	@FXML private CheckBox c1, c2, c3, c4, c5, c6, c7;    // Confirmed checkbox
 	@FXML private Label 		userFullName;
 	@FXML private ImageView		userIcon;
+	@FXML private TextField		sender, senderStreetName, senderStreetNumber, senderCityCode, senderCityName, senderCountryCode, senderID;
+	@FXML private TextField		rec, recStreetName, recStreetNumber, recCityCode, recCityName, recCountryCode, recID;
+	@FXML private TextField		weight, height, width, depth;
+	
 	
 	private int page = 0;
 	private Data data = new Data();
@@ -137,6 +142,56 @@ public class OrderConfirmationSpecialistController implements Initializable {
 	}
 	public void signOutAnchorPaneButton(MouseEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}
+	public void orderProcessingPaneButton(MouseEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("OrderConfirmationSpecialistOrderProcessing.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+	}
+	public void createNewAnchorPaneButton(MouseEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("OrderConfirmationSpecialistCreateNewParcel.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+		}
+	
+	// get data from text fields and create new parcel
+	public void createNewParcelAnchorPaneButton(MouseEvent event) throws IOException {
+
+		String _sender = sender.getText();
+		String _senderStreetName = senderStreetName.getText();
+		String _senderStreetNumber = senderStreetNumber.getText();
+		String _senderCityCode = senderCityCode.getText();
+		String _senderCityName = senderCityName.getText();
+		String _senderCountryCode = senderCountryCode.getText();
+		String _senderID = senderID.getText();
+		
+		String _rec = rec.getText();
+		String _recStreetName = recStreetName.getText();
+		String _recStreetNumber = recStreetNumber.getText();
+		String _recCityCode = recCityCode.getText();
+		String _recCityName = recCityName.getText();
+		String _recCountryCode = recCountryCode.getText();
+		String _recID = recID.getText();
+		
+		String _weight = weight.getText();
+		String _height = height.getText();
+		String _width = width.getText();
+		String _depth = depth.getText();
+
+		data.createNewParcel(_sender, _senderStreetName, _senderStreetNumber, _senderCityCode, _senderCityName, _senderCountryCode, _senderID,
+							 _rec, _recStreetName, _recStreetNumber, _recCityCode, _recCityName, _recCountryCode, _recID,
+							 _weight, _height, _width, _depth);
+		
+		// return to "Order processing" view
+		Parent root = FXMLLoader.load(getClass().getResource("OrderConfirmationSpecialistOrderProcessing.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
