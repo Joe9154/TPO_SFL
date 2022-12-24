@@ -289,9 +289,9 @@ public class Data {
 	
 	
 	// funkcija se izvede ko Order conf. specialist ustvari novo pošiljko
-	public void createNewParcel(String _sender, String _senderStreetName, String _senderStreetNumber, String _senderCityCode, String _senderCityName, String _senderCountryCode, String _senderID, String _rec, String _recStreetName, String _recStreetNumber, String _recCityCode, String _recCityName, String _recCountryCode, String _recID, String _weight, String _height, String _width, String _depth) {
+	public void createNewParcel(String _sender, String _senderStreetName, String _senderStreetNumber, String _senderCityCode, String _senderCityName, String _senderCountryCode, String _senderID, String _senderPhoneNumber, String _rec, String _recStreetName, String _recStreetNumber, String _recCityCode, String _recCityName, String _recCountryCode, String _recID, String _recPhoneNumber, String _weight, String _height, String _width, String _depth) {
 		System.out.println("created new parcel! ");
-		System.out.println(_sender + _senderStreetName+ _rec+ _recStreetName+ _weight+ _height+ _depth);
+		System.out.println(_sender + _senderStreetName+ _senderPhoneNumber+ _rec+ _recStreetName+ _recPhoneNumber+ _weight+ _height+ _depth);
 		
 	}
 }
