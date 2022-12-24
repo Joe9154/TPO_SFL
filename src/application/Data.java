@@ -17,29 +17,30 @@ public class Data {
 	
 	// *** test data ***
 	void setupParcelData() {
-		String id, tracking_no, weight, dimensions, status, action;
+		String id, tracking_no, weight, dimensions, status, action, job_type;
 		id = "0045";
 		tracking_no = "YT72760621444007800";
 		weight = "2.53";
-		dimensions = "12.3 x 10.5 x 5.0";
+		dimensions = "12.3x10.5x5.0";
 		status = "Pending";
 		action = "None"; // Delivery driver -> None, Handover, Cancelled
-		String[][] temp_content = {	{id+"1", tracking_no, weight, dimensions, status, action},
-							  		{id+"2", tracking_no, weight, dimensions, status, action},
-							  		{id+"3", tracking_no, weight, dimensions, status, action},
-							  		{id+"4", tracking_no, weight, dimensions, status, action},
-							  		{id+"5", tracking_no, weight, dimensions, status, action},
-							  		{id+"5", tracking_no, weight, dimensions, status, action},
-							  		{id+"6", tracking_no, weight, dimensions, status, action},
-							  		{id+"7", tracking_no, weight, dimensions, status, action},
-							  		{id+"8", tracking_no, weight, dimensions, status, action},
-							  		{id+"9", tracking_no, weight, dimensions, status, action},
-							  		{id+"10", tracking_no, weight, dimensions, status, action},
-							  		{id+"11", tracking_no, weight, dimensions, status, action},
-							  		{id+"12", tracking_no, weight, dimensions, status, action},
-							  		{id+"13", tracking_no, weight, dimensions, status, action},
-							  		{id+"14", tracking_no, weight, dimensions, status, action},
-							  		{id+"15", tracking_no, weight, dimensions, status, action},
+		job_type = "Check in";
+		String[][] temp_content = {	{id+"1", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"2", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"3", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"4", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"5", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"5", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"6", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"7", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"8", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"9", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"10", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"11", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"12", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"13", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"14", tracking_no, weight, dimensions, status, action, job_type},
+							  		{id+"15", tracking_no, weight, dimensions, status, action, job_type},
 							 	};
 		
 		
@@ -272,10 +273,10 @@ public class Data {
 	// Warehouse manager -  data for employees view
 	public List<String[]> getEmployees(){
 		String[][] employees_temp = {
-								    {"1", "Bob Marley", "", "Warehouse Agent", ""},
-									{"2", "Bob Ross", "", "Warehouse Manager", ""},
-									{"3", "Joe Mama", "", "Delivery Driver", ""},
-									{"4", "Slim Shady", "", "International Driver", ""},
+								    {"1", "Bob Marley", "", "Warehouse Agent", "", "", ""},
+									{"2", "Bob Ross", "", "Warehouse Manager", "", "", ""},
+									{"3", "Joe Mama", "", "Delivery Driver", "", "", ""},
+									{"4", "Slim Shady", "", "International Driver", "", "", ""},
 									};
 		for (String[] employee : employees_temp) {
 			employees.add(employee);

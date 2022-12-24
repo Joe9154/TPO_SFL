@@ -40,6 +40,7 @@ public class WarehouseAgentController implements Initializable {
 	@FXML private Label t1,  t2,  t3,  t4,  t5,  t6,  t7;  // tracking no.
 	@FXML private Label w1,  w2,  w3,  w4,  w5,  w6,  w7;  // weight
 	@FXML private Label d1,  d2,  d3,  d4,  d5,  d6,  d7;  // dimensions
+	@FXML private Label j1,  j2,  j3,  j4,  j5,  j6,  j7;  // job type
 	@FXML private ChoiceBox<String> c1, c2, c3, c4, c5, c6, c7;    // Action
 	
 	private String[] choices = { "Pending", "Processed" };
@@ -58,13 +59,13 @@ public class WarehouseAgentController implements Initializable {
 	// delete default values (as set in SceneBuilder)
 	public void resetContent() {
 		
-		id1.setText(""); t1.setText(""); w1.setText(""); d1.setText(""); 
-		id2.setText(""); t2.setText(""); w2.setText(""); d2.setText("");
-		id3.setText(""); t3.setText(""); w3.setText(""); d3.setText("");
-		id4.setText(""); t4.setText(""); w4.setText(""); d4.setText("");
-		id5.setText(""); t5.setText(""); w5.setText(""); d5.setText("");
-		id6.setText(""); t6.setText(""); w6.setText(""); d6.setText("");
-		id7.setText(""); t7.setText(""); w7.setText(""); d7.setText("");
+		id1.setText(""); t1.setText(""); w1.setText(""); d1.setText(""); j1.setText("");
+		id2.setText(""); t2.setText(""); w2.setText(""); d2.setText(""); j2.setText("");
+		id3.setText(""); t3.setText(""); w3.setText(""); d3.setText(""); j3.setText("");
+		id4.setText(""); t4.setText(""); w4.setText(""); d4.setText(""); j4.setText(""); 
+		id5.setText(""); t5.setText(""); w5.setText(""); d5.setText(""); j5.setText("");
+		id6.setText(""); t6.setText(""); w6.setText(""); d6.setText(""); j6.setText("");
+		id7.setText(""); t7.setText(""); w7.setText(""); d7.setText(""); j7.setText("");
 		contentAnchorPane.getChildren().removeAll(c1, c2, c3, c4, c5, c6, c7);
 		c1.getItems().removeAll(choices); c1.setOnAction(null);
 		c2.getItems().removeAll(choices); c2.setOnAction(null);
@@ -93,6 +94,7 @@ public class WarehouseAgentController implements Initializable {
 			t1.setText( parcels.get(0)[1]);
 			w1.setText( parcels.get(0)[2]);
 			d1.setText( parcels.get(0)[3]); 
+			j1.setText(parcels.get(0)[6]);
 			c1.getSelectionModel().select(parcels.get(0)[4]);
 			contentAnchorPane.getChildren().add(c1);				
 		}
@@ -101,6 +103,7 @@ public class WarehouseAgentController implements Initializable {
 			t2.setText( parcels.get(1)[1]);
 			w2.setText( parcels.get(1)[2]);
 			d2.setText( parcels.get(1)[3]);
+			j2.setText(parcels.get(1)[6]);
 			c2.getSelectionModel().select(parcels.get(1)[4]);
 			contentAnchorPane.getChildren().add(c2);				
 		}
@@ -109,6 +112,7 @@ public class WarehouseAgentController implements Initializable {
 			t3.setText( parcels.get(2)[1]);
 			w3.setText( parcels.get(2)[2]);
 			d3.setText( parcels.get(2)[3]);
+			j3.setText(parcels.get(2)[6]);
 			c3.getSelectionModel().select(parcels.get(2)[4]);
 			contentAnchorPane.getChildren().add(c3);				
 		}
@@ -117,6 +121,7 @@ public class WarehouseAgentController implements Initializable {
 			t4.setText( parcels.get(3)[1]);
 			w4.setText( parcels.get(3)[2]);
 			d4.setText( parcels.get(3)[3]);
+			j4.setText(parcels.get(3)[6]);
 			c4.getSelectionModel().select(parcels.get(3)[4]);
 			contentAnchorPane.getChildren().add(c4);				
 		}
@@ -125,6 +130,7 @@ public class WarehouseAgentController implements Initializable {
 			t5.setText( parcels.get(4)[1]);
 			w5.setText( parcels.get(4)[2]);
 			d5.setText( parcels.get(4)[3]);
+			j5.setText(parcels.get(4)[6]);
 			c5.getSelectionModel().select(parcels.get(4)[4]);
 			contentAnchorPane.getChildren().add(c5);				
 		}
@@ -133,6 +139,7 @@ public class WarehouseAgentController implements Initializable {
 			t6.setText( parcels.get(5)[1]);
 			w6.setText( parcels.get(5)[2]);
 			d6.setText( parcels.get(5)[3]);
+			j6.setText(parcels.get(5)[6]);
 			c6.getSelectionModel().select(parcels.get(5)[4]);
 			contentAnchorPane.getChildren().add(c6);				
 		}
@@ -141,6 +148,7 @@ public class WarehouseAgentController implements Initializable {
 			t7.setText( parcels.get(6)[1]);
 			w7.setText( parcels.get(6)[2]);
 			d7.setText( parcels.get(6)[3]);
+			j7.setText(parcels.get(6)[6]);
 			c7.getSelectionModel().select(parcels.get(6)[4]);
 			contentAnchorPane.getChildren().add(c7);				
 		}
